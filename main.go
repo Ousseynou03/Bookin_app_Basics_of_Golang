@@ -10,6 +10,10 @@ func main() {
 	const conferenceTickets = 50
 	var remainingTickets = 50
 
+	//Appel de la fonction greetUsers()
+
+	greetUsers(conferenceName)
+
 	fmt.Println("Welcome to\n", conferenceName, "booking application")
 	fmt.Println("We have total of", conferenceTickets, "tickets and", remainingTickets, "are still available")
 	fmt.Println("Get yours tickets here to attend")
@@ -106,7 +110,7 @@ func main() {
 	case "New York":
 		//Exécution code concernant New York
 
-	case "Singapore":
+	case "Singapore", "Hong Kong":
 		//Exécution code concernant Singuapore
 	
 	case "London":
@@ -117,5 +121,13 @@ func main() {
 
 	case "Mexico City":
 		//some code here
+	
+	
+	default:
+		fmt.Println("Vous n'avez pas séléctionnez une ville valide")
 	}
+}
+
+func greetUsers(confName string)  {
+	fmt.Printf("Welcome to %v booking application", confName)
 }
